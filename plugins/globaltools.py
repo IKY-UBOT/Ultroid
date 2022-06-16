@@ -446,10 +446,10 @@ async def gcast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Give some text to Globally Broadcast or reply a message..`"
+            event, "`Bisa Ngetik Ga Kontol!!!...`"
         )
 
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("`Lu lagi Ajg!!! Kalo limit Gausah Bacot!!!...`")
     er = 0
     done = 0
     err = ""
@@ -531,9 +531,9 @@ async def gucast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Give some text to Globally Broadcast or reply a message..`"
+            event, "`Yang Bener Kalo Typing Kontol!!!...`"
         )
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("`Sabar Kontol Gua Lagi Berak Ajg!!!...`")
     er = 0
     done = 0
     if event.client._dialogs:
