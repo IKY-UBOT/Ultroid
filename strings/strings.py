@@ -7,14 +7,13 @@ try:
     from google_trans_new import google_translator
     Trs = google_translator()
 except ImportError:
-    LOGS.info("'google_trans_new' not installed!")
+    LOGS.error("'google_trans_new' not installed!")
     Trs = None
 
 try:
     from yaml import safe_load
 except ModuleNotFoundError:
-    LOGS.info("'pyYaml' not installed!\nPlease install it to use Ultroid.")
-    sys.exit()
+    from pyUltroid.functions.tools import safe_load
 
 language = [udB.get_key("language") or "en"]
 languages = {}
