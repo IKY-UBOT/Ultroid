@@ -352,7 +352,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="gban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gbanning...`")
+    xx = await e.eor("`Memulai Global Banned...`")
     reason = ""
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
@@ -425,7 +425,7 @@ async def _(e):
     gban(userid, reason)
     if isinstance(user, User):
         await e.client(BlockRequest(int(userid)))
-    gb_msg = f"**#Gbanned** {name} `in {chats} chats and added to gbanwatch!`"
+    gb_msg = f"**Si** {name} `Ini {chats} Sudah Di Gbanned...`"
     if reason:
         gb_msg += f"\n**Reason** : {reason}"
     await xx.edit(gb_msg)
@@ -509,7 +509,7 @@ async def gcast(event):
                 except BaseException as h:
                     err += "• " + str(h) + "\n"
                     er += 1
-    text += f"Done in {done} chats, error in {er} chat(s)"
+    text += f"**Berhasil Mengirim Pesan Ke** `{done} ` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
     if err != "":
         open("gcast-error.log", "w+").write(err)
         text += f"\nYou can do `{HNDLR}ul gcast-error.log` to know error report."
